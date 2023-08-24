@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useClasses } from './styles';
 import { useActions } from '../../hooks/useActions';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
@@ -8,7 +8,7 @@ const Login = () => {
   const classes = useClasses();
   const navigate = useNavigate();
   const { signin, signup } = useActions();
-  const { error } = useTypedSelector((state) => state.auth);
+  const { authenticated, error } = useTypedSelector((state) => state.auth);
   const [type, setType] = useState('');
   const [signinData, setSigninData] = useState({
     email: '',
@@ -29,6 +29,13 @@ const Login = () => {
     signup(signupData, navigate);
     setType('signup');
   };
+
+  useEffect(() => {
+    if (authenticated) {
+      navigate('/');
+    }
+  }, []);
+
   return (
     <div className={classes.container}>
       <div className={classes.wrapper}>
@@ -48,6 +55,7 @@ const Login = () => {
             setSigninData({ ...signinData, password: e.target.value })
           }
           placeholder='password'
+          type='password'
           className={classes.input}
         />
         {error && type == 'signin' && (
