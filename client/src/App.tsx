@@ -47,18 +47,20 @@ const App = ({ darkMode, setDarkMode }: Props) => {
           <Navbar />
           <div className={classes.wrapper}>
             <Routes>
-              <Route path='/' element={<Home type='random' />} />
-              <Route path='/trends' element={<Home type='trend' />} />
-              <Route
-                path='/subscriptions'
-                element={<Home type='subscriptions' />}
-              />
-              <Route path='search' element={<Search />} />
+              <Route path='/'>
+                <Route index element={<Home type='random' />} />
+                <Route path='/trends' element={<Home type='trend' />} />
+                <Route
+                  path='/subscriptions'
+                  element={<Home type='subscriptions' />}
+                />
+                <Route path='search' element={<Search />} />
 
-              <Route path='/video'>
-                <Route path=':id' element={<Video />} />
+                <Route path='/video'>
+                  <Route path=':id' element={<Video />} />
+                </Route>
+                <Route path='/signin' element={<SignIn />} />
               </Route>
-              <Route path='/signin' element={<SignIn />} />
             </Routes>
           </div>
         </div>

@@ -36,18 +36,6 @@ export const useClasses = makeStyles<Theme, Props>((theme: Theme) => ({
     color: theme.text,
     flex: 1,
   },
-  button: {
-    backgroundColor: 'transparent',
-    borderRadius: '3px',
-    padding: '5px 15px',
-    border: '1px solid #3ea6ff',
-    color: '#3ea6ff',
-    display: 'flex',
-    alignItems: 'center',
-    gap: '5px',
-    fontWeight: 500,
-    cursor: 'pointer',
-  },
   userContainer: {
     display: 'flex',
     alignItems: 'center',

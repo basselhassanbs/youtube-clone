@@ -3,7 +3,7 @@ import { ActionType } from '../action-types';
 import { Action } from '../actions/videos';
 
 interface VideosState {
-  videos: VideoInfo[];
+  data: VideoInfo[];
   allVideos: VideoInfo[];
   recommandations: VideoInfo[];
   loading: boolean;
@@ -11,7 +11,7 @@ interface VideosState {
 }
 
 const initialState: VideosState = {
-  videos: [],
+  data: [],
   allVideos: [],
   recommandations: [],
   loading: false,
@@ -23,21 +23,21 @@ const reducer = (state: VideosState = initialState, action: Action) => {
     case ActionType.FETCH_VIDEOS:
       return {
         ...state,
-        videos: [],
+        data: [],
         loading: true,
         error: null,
       };
     case ActionType.FETCH_VIDEOS_SUCCESS:
       return {
         ...state,
-        videos: action.payload,
+        data: action.payload,
         loading: false,
         error: null,
       };
     case ActionType.FETCH_VIDEOS_ERROR:
       return {
         ...state,
-        videos: [],
+        data: [],
         loading: false,
         error: action.payload,
       };

@@ -7,11 +7,6 @@ export const useClasses = makeStyles((theme: Theme) => ({
     alignItems: 'center',
     gap: '10px',
   },
-  channelImg: {
-    height: '42px',
-    width: '42px',
-    borderRadius: '50%',
-  },
   input: {
     border: 'none',
     backgroundColor: 'transparent',

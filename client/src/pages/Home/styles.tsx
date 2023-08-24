@@ -8,7 +8,8 @@ export const useClasses = makeStyles((theme: Theme) => ({
   },
   div: {
     display: 'flex',
-    justifyContent: 'center',
+    flexDirection: 'column',
+    alignItems: 'center',
     fontWeight: 500,
     color: theme.text,
   },

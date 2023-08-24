@@ -8,11 +8,6 @@ export const useClasses = makeStyles((theme: Theme) => ({
     gap: '10px',
     margin: '30px 0px',
   },
-  img: {
-    height: '42px',
-    width: '42px',
-    borderRadius: '50%',
-  },
   details: {
     display: 'flex',
     flexDirection: 'column',

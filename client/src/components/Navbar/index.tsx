@@ -8,6 +8,7 @@ import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../../hooks/useActions';
 import Upload from '../Upload';
 import Avatar from '../Avatar';
+import Button from '../Button';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -78,13 +79,7 @@ const Navbar = () => {
               )}
             </div>
           ) : (
-            <button
-              className={classes.button}
-              onClick={() => navigate('/signin')}
-            >
-              <AccountCircleOutlinedIcon />
-              SIGN IN
-            </button>
+            <Button />
           )}
         </div>
       </div>

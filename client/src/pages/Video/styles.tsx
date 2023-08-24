@@ -50,11 +50,6 @@ export const useClasses = makeStyles((theme: Theme) => ({
     display: 'flex',
     gap: '10px',
   },
-  channelImg: {
-    height: '42px',
-    width: '42px',
-    borderRadius: '50%',
-  },
   channelDetails: {
     color: theme.text,
   },

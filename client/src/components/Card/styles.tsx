@@ -28,11 +28,6 @@ export const useClasses = makeStyles<Theme, Props>((theme) => ({
     marginTop: ({ type }) => (type === 'sm' ? '' : '16px'),
     flex: ({ type }) => (type === 'sm' ? 1 : ''),
   },
-  channelImg: {
-    height: '36px',
-    width: '36px',
-    borderRadius: '20px',
-  },
   text: {},
   title: {
     fontSize: '14px',

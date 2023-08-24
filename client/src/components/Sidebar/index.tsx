@@ -19,6 +19,7 @@ import { useClasses } from './styles';
 import { Dispatch, SetStateAction } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
+import Button from '../Button';
 interface SidebarProps {
   darkMode: boolean;
   setDarkMode: Dispatch<SetStateAction<boolean>>;
@@ -64,13 +65,7 @@ const Sidebar = ({ darkMode, setDarkMode }: SidebarProps) => {
           <>
             <div className={classes.like}>
               Sign in to like videos, comment, and subscribe.
-              <button
-                className={classes.button}
-                onClick={() => navigate('/signin')}
-              >
-                <AccountCircleOutlinedIcon />
-                SIGN IN
-              </button>
+              <Button style={{ marginTop: '10px' }} />
             </div>
             <hr className={classes.hr} />
           </>

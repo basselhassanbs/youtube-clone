@@ -22,7 +22,6 @@ const Card = ({ type, video }: CardProps) => {
       <div className={classes.details}>
         {type === 'lg' && (
           <Avatar name={video.user.name} imgUrl={video.user.img} />
-          // <img className={classes.channelImg} src={video.user.img} />
         )}
         <div className={classes.text}>
           <h1 className={classes.title}>{video.title}</h1>

@@ -97,7 +97,6 @@ const Video = () => {
         <div className={classes.channel}>
           <div className={classes.channelInfo}>
             <Avatar imgUrl={channel?.img || ''} name={channel?.name || ''} />
-            {/* <img className={classes.channelImg} src={channel?.img} /> */}
             <div className={classes.channelDetails}>
               <div className={classes.channelName}>{channel?.name}</div>
               <div className={classes.channelCounter}>

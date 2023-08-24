@@ -13,7 +13,6 @@ const Comment = ({ comment }: Props) => {
   return (
     <div className={classes.container}>
       <Avatar name={comment.user?.name} imgUrl={comment.user?.img} />
-      {/* <img className={classes.img} src={comment.user?.img} /> */}
       <div className={classes.details}>
         <span className={classes.name}>
           {comment.user?.name}{' '}

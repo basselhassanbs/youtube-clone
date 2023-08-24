@@ -17,7 +17,6 @@ const Comments = ({ data }: Props) => {
     <div>
       <div className={classes.newComment}>
         <Avatar imgUrl={user.img} name={user.name} />
-        {/* <img className={classes.channelImg} src={user.img} /> */}
         <input className={classes.input} placeholder='Add a comment...' />
       </div>
       {data?.map((comment) => (
