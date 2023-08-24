@@ -12,7 +12,7 @@ module.exports = (app) => {
   app.use(express.json());
   app.use(
     cors({
-      origin: '*',
+      origin: process.env.CORS_DOMAIN,
       credentials: true,
     })
   );
