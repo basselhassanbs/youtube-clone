@@ -35,13 +35,13 @@ const Home: React.FC<Props> = ({ type }: Props) => {
       {!loading && data.length == 0 && (
         <div className={classes.div}>No content available</div>
       )}
-      {
+      {!loading && data.length > 0 && (
         <div className={classes.container}>
           {data.map((video: VideoInfo) => (
             <Card key={video._id} type='lg' video={video} />
           ))}
         </div>
-      }
+      )}
     </>
   );
 };
