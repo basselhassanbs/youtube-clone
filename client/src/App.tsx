@@ -10,7 +10,6 @@ import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 import Home from './pages/Home';
 import Video from './pages/Video';
 import SignIn from './pages/SignIn';
-import ProtectedRoute from './utils/ProtecedRoute';
 import { useActions } from './hooks/useActions';
 import Search from './pages/Search';
 
