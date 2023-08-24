@@ -1,4 +1,4 @@
-const { Video } = require('../models/Video');
+const { Video } = require('../models/video');
 const { Comment, validate } = require('../models/comment');
 
 exports.createComment = async (req, res) => {
