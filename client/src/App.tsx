@@ -6,7 +6,7 @@ import light from './theme/light';
 import { ThemeProvider, makeStyles } from '@mui/styles';
 import { Theme } from '@mui/material';
 import { Dispatch, SetStateAction } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 import Home from './pages/Home';
 import Video from './pages/Video';
 import SignIn from './pages/SignIn';
@@ -41,7 +41,7 @@ const App = ({ darkMode, setDarkMode }: Props) => {
   }, []);
   return (
     <div className={classes.container} onClick={() => setShowPopup(false)}>
-      <BrowserRouter>
+      <HashRouter>
         <Sidebar darkMode={darkMode} setDarkMode={setDarkMode} />
         <div className={classes.main}>
           <Navbar />
@@ -64,7 +64,7 @@ const App = ({ darkMode, setDarkMode }: Props) => {
             </Routes>
           </div>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };
