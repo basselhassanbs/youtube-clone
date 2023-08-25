@@ -44,7 +44,12 @@ export const useClasses = makeStyles<Theme, Props>((theme: Theme) => ({
     color: theme.text,
     position: 'relative',
   },
-  user: { display: 'flex', alignItems: 'center', gap: '10px' },
+  user: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '10px',
+    cursor: 'pointer',
+  },
   avatar: {
     height: '32px',
     width: '32px',

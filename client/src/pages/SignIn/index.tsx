@@ -3,6 +3,8 @@ import { useClasses } from './styles';
 import { useActions } from '../../hooks/useActions';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useNavigate } from 'react-router-dom';
+import Signin from '../../components/Signin';
+import Signup from '../../components/Signup';
 
 const Login = () => {
   const classes = useClasses();
@@ -41,73 +43,9 @@ const Login = () => {
       <div className={classes.wrapper}>
         <h1 className={classes.h1}>Sign in</h1>
         <h2 className={classes.h2}>to continue to BaselTube</h2>
-        <input
-          value={signinData.email}
-          onChange={(e) =>
-            setSigninData({ ...signinData, email: e.target.value })
-          }
-          placeholder='email'
-          className={classes.input}
-        />
-        <input
-          value={signinData.password}
-          onChange={(e) =>
-            setSigninData({ ...signinData, password: e.target.value })
-          }
-          placeholder='password'
-          type='password'
-          className={classes.input}
-        />
-        {error && type == 'signin' && (
-          <span className={classes.error}>{error}</span>
-        )}
-
-        <button
-          className={classes.button}
-          onClick={handleSignin}
-          disabled={signinData.email == '' || signinData.password == ''}
-        >
-          Sign in
-        </button>
+        <Signin />
         <h2 className={classes.h1}>or</h2>
-        <input
-          value={signupData.name}
-          onChange={(e) =>
-            setSignupData({ ...signupData, name: e.target.value })
-          }
-          placeholder='username'
-          className={classes.input}
-        />
-        <input
-          value={signupData.email}
-          onChange={(e) =>
-            setSignupData({ ...signupData, email: e.target.value })
-          }
-          placeholder='email'
-          className={classes.input}
-        />
-        <input
-          value={signupData.password}
-          onChange={(e) =>
-            setSignupData({ ...signupData, password: e.target.value })
-          }
-          placeholder='password'
-          className={classes.input}
-        />
-        {error && type == 'signup' && (
-          <span className={classes.error}>{error}</span>
-        )}
-        <button
-          className={classes.button}
-          onClick={handleSignup}
-          disabled={
-            signupData.name == '' ||
-            signupData.email == '' ||
-            signupData.password == ''
-          }
-        >
-          Sign up
-        </button>
+        <Signup />
       </div>
       <div className={classes.more}>
         English(USA)

@@ -22,7 +22,7 @@ export const signup = (data: SignupInput, navigate: NavigateFunction) => {
     } catch (error: any) {
       dispatch({
         type: ActionType.AUTH_USER_ERROR,
-        payload: 'Invalid credentials',
+        payload: error.message,
       });
     }
   };
