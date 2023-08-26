@@ -5,12 +5,12 @@ type Props = {
   type: 'sm' | 'lg';
 };
 
-export const useClasses = makeStyles<Theme, Props>((theme) => ({
+export const useClasses = makeStyles<Theme, Props>((theme: Theme) => ({
   container: {
-    width: ({ type }) => (type === 'sm' ? '' : '360px'),
-    maxWidth: '400px',
+    width: ({ type }) => (type === 'sm' ? '' : '340px'),
+    maxWidth: ({ type }) => (type === 'sm' ? '' : '450px'),
     cursor: 'pointer',
-    marginInline: ({ type }) => (type === 'sm' ? '' : '20px'),
+    marginInline: ({ type }) => (type === 'sm' ? '' : '10px'),
     marginBottom: ({ type }) => (type === 'sm' ? '10px' : '20px'),
     flexGrow: 1,
     display: ({ type }) => (type === 'sm' ? 'flex' : ''),
@@ -33,6 +33,9 @@ export const useClasses = makeStyles<Theme, Props>((theme) => ({
     fontSize: '14px',
     fontWeight: 500,
     color: theme.text,
+    width: ({ type }) => (type === 'sm' ? '180px' : '340px'),
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
   },
   channelName: {
     fontSize: '14px',

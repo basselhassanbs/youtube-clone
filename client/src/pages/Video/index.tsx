@@ -96,7 +96,9 @@ const Video = () => {
         <hr className={classes.hr} />
         <div className={classes.channel}>
           <div className={classes.channelInfo}>
-            <Avatar imgUrl={channel?.img || ''} name={channel?.name || ''} />
+            <div>
+              <Avatar imgUrl={channel?.img || ''} name={channel?.name || ''} />
+            </div>
             <div className={classes.channelDetails}>
               <div className={classes.channelName}>{channel?.name}</div>
               <div className={classes.channelCounter}>

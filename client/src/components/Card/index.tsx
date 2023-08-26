@@ -21,7 +21,9 @@ const Card = ({ type, video }: CardProps) => {
       <img className={classes.img} src={video.imgUrl} />
       <div className={classes.details}>
         {type === 'lg' && (
-          <Avatar name={video.user.name} imgUrl={video.user.img} />
+          <div>
+            <Avatar name={video.user.name} imgUrl={video.user.img} />
+          </div>
         )}
         <div className={classes.text}>
           <h1 className={classes.title}>{video.title}</h1>

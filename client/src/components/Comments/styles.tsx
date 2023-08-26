@@ -13,5 +13,6 @@ export const useClasses = makeStyles((theme: Theme) => ({
     borderBottom: `1px solid ${theme.soft}`,
     width: '100%',
     outline: 'none',
+    color: theme.text,
   },
 }));

@@ -22,7 +22,7 @@ const useClasses = makeStyles((theme: Theme) => ({
     backgroundColor: theme.bg,
   },
   wrapper: {
-    padding: '22px 26px',
+    padding: '22px 18px',
   },
 }));
 

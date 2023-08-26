@@ -65,7 +65,7 @@ const Signin = () => {
         Sign in
       </button>
 
-      {error && <span className={classes.error}>{error}</span>}
+      {/* {error && <span className={classes.error}>{error}</span>} */}
     </form>
   );
 };
